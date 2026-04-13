@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="plugin/ui/codex-mem-logomark.webp" alt="codex-mem" width="96" />
+  <img src="assets/codex-icon.svg" alt="codex-mem icon" width="84" />
+</p>
+
+<p align="center">
+  <img src="assets/hero.svg" alt="codex-mem animated hero" width="100%" />
 </p>
 
 <h1 align="center">codex-mem</h1>
@@ -9,21 +13,56 @@
 </p>
 
 <p align="center">
-  <img alt="Platform" src="https://img.shields.io/badge/platform-Codex-111827?style=flat-square">
-  <img alt="Package" src="https://img.shields.io/badge/package-prebuilt-2563eb?style=flat-square">
-  <img alt="License" src="https://img.shields.io/badge/license-AGPL--3.0-16a34a?style=flat-square">
+  <img alt="Codex" src="https://img.shields.io/badge/Codex-native-111827?style=for-the-badge">
+  <img alt="MCP" src="https://img.shields.io/badge/MCP-enabled-2563eb?style=for-the-badge">
+  <img alt="Local-first" src="https://img.shields.io/badge/Local-first-16a34a?style=for-the-badge">
+  <img alt="AGPL-3.0" src="https://img.shields.io/badge/AGPL--3.0-f59e0b?style=for-the-badge">
 </p>
 
-codex-mem captures Codex session history, watches transcripts, and injects relevant context into future Codex turns. It installs native Codex hooks, registers an MCP server, writes durable AGENTS context, and keeps a local memory store under `~/.codex-mem`.
+<p align="center">
+  <a href="docs/i18n/README.zh-cn.md">中文</a> •
+  <a href="docs/i18n/README.zh-tw.md">繁體中文</a> •
+  <a href="docs/i18n/README.ja.md">日本語</a> •
+  <a href="docs/i18n/README.pt-br.md">Português (BR)</a> •
+  <a href="docs/i18n/README.pt-pt.md">Português (PT)</a> •
+  <a href="docs/i18n/README.ko.md">한국어</a> •
+  <a href="docs/i18n/README.es.md">Español</a> •
+  <a href="docs/i18n/README.de.md">Deutsch</a> •
+  <a href="docs/i18n/README.fr.md">Français</a> •
+  <a href="docs/i18n/README.he.md">עברית</a> •
+  <a href="docs/i18n/README.ar.md">العربية</a> •
+  <a href="docs/i18n/README.ru.md">Русский</a> •
+  <a href="docs/i18n/README.pl.md">Polski</a> •
+  <a href="docs/i18n/README.cs.md">Čeština</a> •
+  <a href="docs/i18n/README.nl.md">Nederlands</a> •
+  <a href="docs/i18n/README.tr.md">Türkçe</a> •
+  <a href="docs/i18n/README.uk.md">Українська</a> •
+  <a href="docs/i18n/README.vi.md">Tiếng Việt</a> •
+  <a href="docs/i18n/README.tl.md">Tagalog</a> •
+  <a href="docs/i18n/README.id.md">Indonesia</a> •
+  <a href="docs/i18n/README.th.md">ไทย</a> •
+  <a href="docs/i18n/README.hi.md">हिन्दी</a> •
+  <a href="docs/i18n/README.bn.md">বাংলা</a> •
+  <a href="docs/i18n/README.ur.md">اردو</a> •
+  <a href="docs/i18n/README.ro.md">Română</a> •
+  <a href="docs/i18n/README.sv.md">Svenska</a> •
+  <a href="docs/i18n/README.it.md">Italiano</a> •
+  <a href="docs/i18n/README.el.md">Ελληνικά</a> •
+  <a href="docs/i18n/README.hu.md">Magyar</a> •
+  <a href="docs/i18n/README.fi.md">Suomi</a> •
+  <a href="docs/i18n/README.da.md">Dansk</a> •
+  <a href="docs/i18n/README.no.md">Norsk</a>
+</p>
 
-## Why this exists
+<p align="center">
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#what-you-get">What You Get</a> •
+  <a href="#how-it-works">How It Works</a> •
+  <a href="#documentation">Documentation</a> •
+  <a href="#license">License</a>
+</p>
 
-Codex sessions are strong in the moment and weak across time. codex-mem closes that gap by:
-
-- recording useful session state from transcript activity
-- making prior work searchable through MCP tools
-- injecting relevant context into new Codex turns
-- keeping everything local and inspectable
+codex-mem gives Codex continuity. It captures useful session history, watches transcripts, registers MCP search tools, and injects relevant context into future Codex turns without turning your workflow into manual note-taking.
 
 ## Quick Start
 
@@ -41,18 +80,50 @@ npx codex-mem start
 
 Restart Codex.
 
-Then use Codex normally. Memory capture and context injection are automatic.
+## What You Get
 
-## What the install writes
-
-| Path | Purpose |
+| Capability | What it does |
 | --- | --- |
-| `~/.codex/hooks.json` | Codex native hook registration |
-| `~/.codex/config.toml` | MCP server registration |
-| `~/.codex/AGENTS.md` | durable session context block |
-| `~/.codex-mem/app` | installed runtime bundle |
-| `~/.codex-mem/transcript-watch.json` | transcript watcher config |
-| `~/.codex-mem` | data, logs, settings, memory database |
+| Native Codex hooks | inject context on session start and prompt submit |
+| Transcript watcher | captures durable session activity from `~/.codex/sessions/**/*.jsonl` |
+| Local memory store | keeps settings, logs, state, and runtime under `~/.codex-mem` |
+| MCP search tools | makes prior work queryable from inside Codex |
+| AGENTS context | writes durable project memory into `~/.codex/AGENTS.md` |
+| Local viewer | inspect memory at `http://127.0.0.1:37777` |
+
+## Why codex-mem
+
+- keeps project context alive across sessions
+- makes prior decisions searchable
+- reduces repeated investigation work
+- stays local and inspectable
+- works with Codex instead of fighting it
+
+## How It Works
+
+```mermaid
+flowchart LR
+  A[Codex session JSONL] --> B[Transcript watcher]
+  A --> C[Codex hooks]
+  C --> D[Worker service]
+  B --> D
+  D --> E[Local memory store]
+  D --> F[AGENTS.md context]
+  D --> G[MCP search server]
+  G --> H[Codex tools]
+```
+
+## Install Output
+
+codex-mem writes:
+
+- `~/.codex/hooks.json`
+- `~/.codex/config.toml`
+- `~/.codex/AGENTS.md`
+- `~/.codex-mem/app`
+- `~/.codex-mem/transcript-watch.json`
+- `~/.codex-mem/settings.json`
+- `~/.codex-mem/logs`
 
 ## Commands
 
@@ -66,36 +137,6 @@ npx codex-mem search "your query"
 npx codex-mem uninstall
 ```
 
-Viewer:
-
-```text
-http://127.0.0.1:37777
-```
-
-## How It Works
-
-```mermaid
-flowchart LR
-  A[Codex session JSONL] --> B[Transcript watcher]
-  A --> C[Codex hooks]
-  C --> D[Worker service]
-  B --> D
-  D --> E[Local memory store]
-  D --> F[AGENTS.md context]
-  D --> G[MCP search server]
-  G --> H[Codex MCP tools]
-```
-
-## Included in this repository
-
-- prebuilt CLI entrypoint
-- prebuilt worker and MCP runtime
-- Codex plugin manifest
-- viewer assets
-- issue templates
-- smoke-test workflow
-- concise docs for install, architecture, and troubleshooting
-
 ## Documentation
 
 - [Getting Started](docs/getting-started.md)
@@ -104,20 +145,28 @@ flowchart LR
 - [Contributing](CONTRIBUTING.md)
 - [Security](SECURITY.md)
 
+## Repository Shape
+
+This repository is intentionally small and publishable:
+
+- prebuilt CLI
+- prebuilt worker runtime
+- prebuilt MCP server
+- Codex plugin manifest
+- viewer assets
+- docs and issue templates
+
 ## Privacy
 
-codex-mem is built around local state:
+codex-mem is local-first:
 
 - local runtime
 - local settings
+- local logs
 - local transcript watch config
 - local viewer
 
-Use `<private> ... </private>` in prompts when you want to prevent sensitive content from being stored.
-
-## Scope
-
-This repository is intentionally Codex-first. It is not a multi-assistant integration bundle.
+Wrap sensitive content with `<private> ... </private>` if you do not want it stored.
 
 ## License
 
