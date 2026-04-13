@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "__CODEX_MEM_CODEX_SESSION_START_COMMAND__",
+            "timeout": 60,
+            "statusMessage": "codex-mem: codex session start context"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "__CODEX_MEM_CODEX_USER_PROMPT_SUBMIT_COMMAND__",
+            "timeout": 60,
+            "statusMessage": "codex-mem: codex user prompt init"
+          }
+        ]
+      }
+    ]
+  }
+}

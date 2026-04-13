@@ -1,0 +1,33 @@
+{
+  "name": "codex-mem",
+  "version": "12.1.0",
+  "description": "Persistent memory for Codex",
+  "author": {
+    "name": "Alex Newman"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "codex",
+    "mcp",
+    "memory",
+    "transcript",
+    "nodejs"
+  ],
+  "interface": {
+    "displayName": "codex-mem",
+    "shortDescription": "Persistent memory for Codex CLI work.",
+    "longDescription": "codex-mem captures Codex CLI session activity, stores reusable observations, and injects relevant context back into future Codex sessions.",
+    "developerName": "Alex Newman",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Find what I already learned about this codebase before I start a new task.",
+      "Search previous Codex sessions for work related to the file I am editing.",
+      "Summarize the last Codex session and inject the most relevant context into this one."
+    ],
+    "brandColor": "#1F6FEB"
+  }
+}

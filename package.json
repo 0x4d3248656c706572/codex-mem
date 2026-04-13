@@ -1,0 +1,40 @@
+{
+  "name": "codex-mem",
+  "version": "12.1.0",
+  "description": "Persistent memory for Codex",
+  "keywords": [
+    "codex",
+    "mcp",
+    "memory",
+    "transcript",
+    "nodejs"
+  ],
+  "author": "Alex Newman",
+  "license": "AGPL-3.0",
+  "type": "module",
+  "bin": {
+    "codex-mem": "./index.js"
+  },
+  "files": [
+    ".codex-plugin",
+    "index.js",
+    "plugin/package.json",
+    "plugin/hooks",
+    "plugin/modes",
+    "plugin/scripts/*.js",
+    "plugin/scripts/*.cjs",
+    "plugin/skills",
+    "plugin/ui"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  },
+  "scripts": {
+    "worker:start": "bun plugin/scripts/worker-service.cjs start",
+    "worker:stop": "bun plugin/scripts/worker-service.cjs stop",
+    "worker:restart": "bun plugin/scripts/worker-service.cjs restart",
+    "worker:status": "bun plugin/scripts/worker-service.cjs status",
+    "pack:check": "npm pack --dry-run"
+  }
+}
