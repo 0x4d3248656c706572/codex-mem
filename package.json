@@ -9,8 +9,16 @@
     "transcript",
     "nodejs"
   ],
-  "author": "Alex Newman",
+  "author": "0x4d3248656c706572",
   "license": "AGPL-3.0",
+  "homepage": "https://github.com/0x4d3248656c706572/codex-mem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0x4d3248656c706572/codex-mem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0x4d3248656c706572/codex-mem/issues"
+  },
   "type": "module",
   "bin": {
     "codex-mem": "./index.js"

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/0x4d3248656c706572/codex-mem
+    about: Read the repository documentation before opening a support issue.

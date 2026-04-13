@@ -3,7 +3,7 @@
   "version": "12.1.0",
   "description": "Persistent memory for Codex",
   "author": {
-    "name": "Alex Newman"
+    "name": "0x4d3248656c706572"
   },
   "license": "AGPL-3.0",
   "keywords": [
@@ -17,7 +17,7 @@
     "displayName": "codex-mem",
     "shortDescription": "Persistent memory for Codex CLI work.",
     "longDescription": "codex-mem captures Codex CLI session activity, stores reusable observations, and injects relevant context back into future Codex sessions.",
-    "developerName": "Alex Newman",
+    "developerName": "0x4d3248656c706572",
     "category": "Productivity",
     "capabilities": [
       "Interactive",

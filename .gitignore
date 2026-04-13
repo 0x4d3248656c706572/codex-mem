@@ -1,0 +1,6 @@
+node_modules/
+.codex/
+.codex-mem/
+*.log
+npm-debug.log*
+package-lock.local.json
