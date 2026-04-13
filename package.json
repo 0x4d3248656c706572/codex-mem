@@ -4,8 +4,13 @@
   "description": "Persistent memory for Codex",
   "keywords": [
     "codex",
+    "codex-cli",
     "mcp",
     "memory",
+    "context",
+    "developer-tools",
+    "agent-memory",
+    "local-first",
     "transcript",
     "nodejs"
   ],
